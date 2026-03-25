@@ -5,7 +5,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
-    fetch("http://localhost:5000/contact", {
+    fetch(`${API_URL}/contact`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
