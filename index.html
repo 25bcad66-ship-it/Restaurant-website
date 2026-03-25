@@ -1,20 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Restaurant Contact</title>
+    <meta charset="UTF-8">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h2>Contact Us</h2>
+    <header>
+        <h1>My Restaurant</h1>
+        <p>Delicious Food Menu</p>
+    </header>
 
-<form id="contactForm">
-    <input type="text" id="name" placeholder="Name" required><br><br>
-    <input type="email" id="email" placeholder="Email" required><br><br>
-    <textarea id="message" placeholder="Message" required></textarea><br><br>
-    <button type="submit">Send</button>
-</form>
+    <section class="menu">
+        <h2>Menu</h2>
 
-<script src="script.js"></script>
+        <div class="item">
+            <h3>Pizza</h3>
+            <p>Price: ₹250</p>
+        </div>
 
+        <div class="item">
+            <h3>Burger</h3>
+            <p>Price: ₹150</p>
+        </div>
+
+        <div class="item">
+            <h3>Pasta</h3>
+            <p>Price: ₹200</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
