@@ -1,20 +1,22 @@
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
+document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const data = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    };
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-    const response = await fetch("https://YOUR-BACKEND-URL.onrender.com/contact", {
+    fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ name, email, message })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch(error => {
+        console.error(error);
     });
-
-    const result = await response.json();
-    alert(result.message);
 });
