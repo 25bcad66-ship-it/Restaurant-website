@@ -4,6 +4,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+    const API_URL = "https://your-app-name.onrender.com";
 
     fetch(`${API_URL}/contact`, {
         method: "POST",
