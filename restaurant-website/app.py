@@ -5,6 +5,9 @@ import os
 
 app = Flask(__name__)
 CORS(app)
+@app.route('/')
+def home():
+    return "Backend is running succesfully"
 
 # 🔗 Use Render DATABASE_URL (set this in environment variables)
 DATABASE_URL = os.getenv("DATABASE_URL")
